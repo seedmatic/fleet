@@ -1,0 +1,11 @@
+2025-12-10T22:46:32.080259Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: starting
+2025-12-10T22:46:32.080882Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: checked socket path="/Users/nxmatic/.xdg/flox.8d52f052.sock" exists=false
+2025-12-10T22:46:32.080888Z  INFO watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: watchdog is on duty this_pid=20303 target_activation_id="59735ca6"
+2025-12-10T22:46:32.080913Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: waiting for termination
+2025-12-10T22:46:32.080918Z DEBUG flox_watchdog::logger: still watching, woof woof
+2025-12-10T22:46:33.042852Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_core::proc_status: no output from /bin/ps, treating as not running pid=20254
+2025-12-10T22:46:33.044055Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_core::proc_status: no output from /bin/ps, treating as not running pid=20254
+2025-12-10T22:46:33.044071Z  INFO watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: running cleanup after all PIDs terminated
+2025-12-10T22:46:33.044081Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: running cleanup
+2025-12-10T22:46:33.044086Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: did not shut down process-compose reason="no socket"
+2025-12-10T22:46:33.044474Z DEBUG watchdog{socket="/Users/nxmatic/.xdg/flox.8d52f052.sock" log_dir="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/log"}: flox_watchdog: finished cleanup

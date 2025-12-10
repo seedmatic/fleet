@@ -1,0 +1,33 @@
+2025-12-10T22:27:39.398926Z DEBUG flox::config: reading raw config (initialized: false, reload: false)
+2025-12-10T22:27:39.398993Z DEBUG flox::config: `$FLOX_CONFIG_DIR` set: /Users/nxmatic/.config/flox
+2025-12-10T22:27:39.399228Z DEBUG flox: set _FLOX_PKGDB_VERBOSITY=2
+2025-12-10T22:27:39.399735Z DEBUG flox::config: reading raw config (initialized: true, reload: false)
+2025-12-10T22:27:39.399952Z DEBUG flox::commands: Skipping update check in development mode
+2025-12-10T22:27:39.400070Z DEBUG flox::commands: Metrics collection disabled
+2025-12-10T22:27:39.400134Z DEBUG flox::utils::init::catalog_client: using catalog client with url: https://api.flox.dev
+2025-12-10T22:27:39.401701Z DEBUG flox::commands: feature flags configured=Features { upload: false, qa: false }
+2025-12-10T22:27:39.401746Z DEBUG check-upgrade: flox::utils::metrics: No metrics client setup, skipping record
+2025-12-10T22:27:39.401912Z DEBUG check-upgrade: flox_rust_sdk::models::environment: detected concrete environment type: path
+2025-12-10T22:27:39.402063Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: created unlocked upgrade information guard upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/git/.flox/cache/upgrade-checks.json"
+2025-12-10T22:27:39.402130Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: lock acquired upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/git/.flox/cache/upgrade-checks.json"
+2025-12-10T22:27:39.402164Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: upgrading to_upgrade=""
+2025-12-10T22:27:39.402246Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: checking group membership for requested packages
+2025-12-10T22:27:39.402251Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: using catalog client to upgrade
+2025-12-10T22:27:39.402255Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: upgrading to_upgrade=""
+2025-12-10T22:27:39.402294Z DEBUG check-upgrade:check-upgrade:merge_manifest: flox_rust_sdk::models::lockfile: composing included environments
+2025-12-10T22:27:39.402302Z DEBUG check-upgrade:check-upgrade:merge_manifest: flox_rust_sdk::models::lockfile: inspecting included environment name="/var/lib/gits/nxmatic/fleet-manifests/flox/keyhole"
+2025-12-10T22:27:39.402312Z DEBUG check-upgrade:check-upgrade:merge_manifest: flox_rust_sdk::models::lockfile: fetching included environment name="/var/lib/gits/nxmatic/fleet-manifests/flox/keyhole"
+2025-12-10T22:27:39.402364Z DEBUG check-upgrade:check-upgrade:merge_manifest: flox_rust_sdk::models::environment: detected concrete environment type: path
+2025-12-10T22:27:39.402610Z DEBUG check-upgrade:check-upgrade:merge_manifest:merge_all: flox_rust_sdk::models::manifest::composite: merging new manifest name="Current manifest"
+2025-12-10T22:27:39.402641Z DEBUG check-upgrade:check-upgrade:merge_manifest:merge_all: flox_rust_sdk::models::manifest::composite::shallow: manifest pair merged successfully
+2025-12-10T22:27:39.402646Z DEBUG check-upgrade:check-upgrade:merge_manifest:merge_all: flox_rust_sdk::models::manifest::composite: finished merging manifests n_warnings=0
+2025-12-10T22:27:39.402735Z DEBUG check-upgrade:check-upgrade:resolve_manifest:resolve: flox_rust_sdk::providers::catalog: resolving package groups n_groups=1
+2025-12-10T22:27:40.421037Z DEBUG check-upgrade:check-upgrade:resolve_manifest:resolve: flox_rust_sdk::providers::catalog: received resolved package groups n_groups=1
+2025-12-10T22:27:40.421336Z DEBUG check-upgrade:check-upgrade:resolve_manifest: flox_rust_sdk::models::lockfile: no resolution failures detected
+2025-12-10T22:27:40.423635Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: bulk checking validity of store_paths (paths passed to stdin) cmd=/nix/store/aazg6v221pq98rsab7i9gww46a85y1qv-nix-2.28.2/bin/nix --option extra-experimental-features 'nix-command flakes' path-info --offline --stdin
+2025-12-10T22:27:40.495589Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: bulk setting gc roots for store_paths cmd="echo '/nix/store/gfbrwpq3gz8pimv8jnnnf9n81pgdkqy6-age-1.2.1 /nix/store/2lacwmayfryngjklml9nlxc4xaa3921z-keychain-2.9.8 /nix/store/10krv2hc7mfh7v2azrsidak6347w2s35-git-town-22.2.0 /nix/store/x34bh6s6ighg7lb74nkjbx3nx52zj0j9-git-2.51.2 /nix/store/pnqy3wnpf4qx451dia2s54xl047fhyng-sops-3.11.0 /nix/store/b1rmhl63f928f5x4yl13a7wvy2bf6r6a-ssh-to-age-1.2.0 /nix/store/5x09bw01lwv8xznm15hlz8w7w3asrnby-password-store-1.7.4 /nix/store/jcfc6p66x7qnrwf2dn83gaar13swpfka-gh-2.83.1 /nix/store/ysrkrql494a9l2b12kq6lyy76qk07svk-gitflow-1.12.3 /nix/store/yx9r60aqnw7iwn21w4g5sa4yjp0rabzc-gnupg-2.4.8 /nix/store/6wnscv0364r6430qmx33nn927dlw2vnf-git-2.51.2-doc' | /nix/store/aazg6v221pq98rsab7i9gww46a85y1qv-nix-2.28.2/bin/nix --option extra-experimental-features 'nix-command flakes' build --stdin --offline -j 0 --out-link /Users/nxmatic/.cache/flox/process/.tmpWeLuUO/temp-roots/pre-checked-paths"
+2025-12-10T22:27:40.559206Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: using 'auto' store
+2025-12-10T22:27:40.559221Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: building environment cmd=/nix/store/aazg6v221pq98rsab7i9gww46a85y1qv-nix-2.28.2/bin/nix --option extra-experimental-features 'nix-command flakes' --option pure-eval false --print-build-logs build --no-link --offline --json --file /nix/store/ffh0da5n98rmmrsqd1l3z1janlck84l3-flox-buildenv-0.0.1/lib/buildenv.nix --argstr manifestLock /Users/nxmatic/.cache/flox/process/.tmpWeLuUO/.tmp4GR7pn
+2025-12-10T22:27:41.106494Z DEBUG check-upgrade: flox::commands::check_for_upgrades: Upgrading information with new result. diff={}
+2025-12-10T22:27:41.106650Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: wrote upgrade information upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/git/.flox/cache/upgrade-checks.json"
+2025-12-10T22:27:41.106707Z DEBUG flox::utils::metrics: No metrics client setup, skipping flush

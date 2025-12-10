@@ -1,0 +1,4 @@
+*/.flox/cache
+*/.flox/env/manifest.lock
+*/.flox/log
+*/.flox/run

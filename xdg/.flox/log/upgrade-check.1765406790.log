@@ -1,0 +1,26 @@
+2025-12-10T22:46:30.692999Z DEBUG flox::config: reading raw config (initialized: false, reload: false)
+2025-12-10T22:46:30.693067Z DEBUG flox::config: `$FLOX_CONFIG_DIR` set: /Users/nxmatic/.config/flox
+2025-12-10T22:46:30.693322Z DEBUG flox: set _FLOX_PKGDB_VERBOSITY=2
+2025-12-10T22:46:30.693943Z DEBUG flox::config: reading raw config (initialized: true, reload: false)
+2025-12-10T22:46:30.694162Z DEBUG flox::commands: Skipping update check in development mode
+2025-12-10T22:46:30.694272Z DEBUG flox::commands: Metrics collection disabled
+2025-12-10T22:46:30.694327Z DEBUG flox::utils::init::catalog_client: using catalog client with url: https://api.flox.dev
+2025-12-10T22:46:30.696003Z DEBUG flox::commands: feature flags configured=Features { upload: false, qa: false }
+2025-12-10T22:46:30.696047Z DEBUG check-upgrade: flox::utils::metrics: No metrics client setup, skipping record
+2025-12-10T22:46:30.696236Z DEBUG check-upgrade: flox_rust_sdk::models::environment: detected concrete environment type: path
+2025-12-10T22:46:30.696416Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: created unlocked upgrade information guard upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/cache/upgrade-checks.json"
+2025-12-10T22:46:30.696497Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: lock acquired upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/cache/upgrade-checks.json"
+2025-12-10T22:46:30.696533Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: upgrading to_upgrade=""
+2025-12-10T22:46:30.696601Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: checking group membership for requested packages
+2025-12-10T22:46:30.696607Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: using catalog client to upgrade
+2025-12-10T22:46:30.696611Z DEBUG check-upgrade:check-upgrade: flox_rust_sdk::models::environment::core_environment: upgrading to_upgrade=""
+2025-12-10T22:46:30.696731Z DEBUG check-upgrade:check-upgrade:resolve_manifest:resolve: flox_rust_sdk::providers::catalog: resolving package groups n_groups=1
+2025-12-10T22:46:31.516867Z DEBUG check-upgrade:check-upgrade:resolve_manifest:resolve: flox_rust_sdk::providers::catalog: received resolved package groups n_groups=1
+2025-12-10T22:46:31.516948Z DEBUG check-upgrade:check-upgrade:resolve_manifest: flox_rust_sdk::models::lockfile: no resolution failures detected
+2025-12-10T22:46:31.517292Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: bulk checking validity of store_paths (paths passed to stdin) cmd=/nix/store/aazg6v221pq98rsab7i9gww46a85y1qv-nix-2.28.2/bin/nix --option extra-experimental-features 'nix-command flakes' path-info --offline --stdin
+2025-12-10T22:46:31.566410Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: bulk setting gc roots for store_paths cmd="echo '/nix/store/5n02aaq7wpc3bv5rvm4mnwq8isl6vm5n-xdg-utils-1.2.1 /nix/store/8ax13irsd6bkc9x3765axjcjhg7kcfhc-xdg-user-dirs-0.18 /nix/store/ibb2wcsdnjqh8f9qyyz9vglmihrfs5vx-xdg-ninja-0.2.0.2-unstable-2025-11-01' | /nix/store/aazg6v221pq98rsab7i9gww46a85y1qv-nix-2.28.2/bin/nix --option extra-experimental-features 'nix-command flakes' build --stdin --offline -j 0 --out-link /Users/nxmatic/.cache/flox/process/.tmpKFoPA5/temp-roots/pre-checked-paths"
+2025-12-10T22:46:31.620443Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: using 'auto' store
+2025-12-10T22:46:31.620469Z DEBUG check-upgrade:check-upgrade:build: flox_rust_sdk::providers::buildenv: building environment cmd=/nix/store/aazg6v221pq98rsab7i9gww46a85y1qv-nix-2.28.2/bin/nix --option extra-experimental-features 'nix-command flakes' --option pure-eval false --print-build-logs build --no-link --offline --json --file /nix/store/ffh0da5n98rmmrsqd1l3z1janlck84l3-flox-buildenv-0.0.1/lib/buildenv.nix --argstr manifestLock /Users/nxmatic/.cache/flox/process/.tmpKFoPA5/.tmpvuweLq
+2025-12-10T22:46:36.679375Z DEBUG check-upgrade: flox::commands::check_for_upgrades: Upgrading information with new result. diff={}
+2025-12-10T22:46:36.679852Z DEBUG check-upgrade: flox_rust_sdk::providers::upgrade_checks: wrote upgrade information upgrade_information_path="/private/var/lib/gits/nxmatic/fleet-manifests/flox/xdg/.flox/cache/upgrade-checks.json"
+2025-12-10T22:46:36.680004Z DEBUG flox::utils::metrics: No metrics client setup, skipping flush
