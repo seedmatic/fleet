@@ -1,5 +1,9 @@
 version = 1
 
+[include]
+  [[include.environments]]
+    dir = '/var/lib/git/nxmatic/fleet-manifests/flox/manifest-tools'
+
 [install]
   [install.ceph-client]
     pkg-group = 'kubectl-tools'

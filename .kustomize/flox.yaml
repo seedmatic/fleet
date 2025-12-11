@@ -48,7 +48,7 @@ spec:
         fi
     include:
       environments:
-        - dir: /var/lib/gits/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     options: {}
   env:
     name: git
@@ -106,8 +106,8 @@ spec:
         fi
     include:
       environments:
-        - dir: /var/lib/gits/nxmatic/fleet-manifests/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
-        - dir: /var/lib/gits/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
+        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
   env:
     name: home
     version: 1
@@ -187,6 +187,9 @@ spec:
       kpt:
         pkg-path: kpt
         pkg-group: kpt-tools
+    include:
+      environments:
+        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
     options:
       systems:
         - aarch64-darwin
@@ -261,6 +264,29 @@ spec:
 apiVersion: flox.dev/v1alpha1
 kind: FloxEnvironment
 metadata:
+  name: manifest-tools
+spec:
+  manifest:
+    version: 1
+    install:
+      dasel:
+        pkg-path: dasel
+        version: ^2.8.1
+        pkg-group: yaml-tools
+      yq-go:
+        pkg-path: yq-go
+        pkg-group: yaml-tools
+    options:
+      systems:
+        - aarch64-darwin
+        - aarch64-linux
+  env:
+    name: manifest-tools
+    version: 1
+---
+apiVersion: flox.dev/v1alpha1
+kind: FloxEnvironment
+metadata:
   name: nix
 spec:
   manifest:
@@ -288,9 +314,11 @@ spec:
         pkg-path: nvfetcher
       nix-fast-build:
         pkg-path: nix-fast-build
+    profile:
+      common: "PATH=\"/run/wrappers/bin:$PATH\"      \n"
     include:
       environments:
-        - dir: /var/lib/gits/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     options: {}
   env:
     name: nix
@@ -301,7 +329,7 @@ kind: ApplySetters
 metadata:
   name: fleet-base-dir
 data:
-  fleet-base-dir: /var/lib/gits/nxmatic/fleet-manifests/flox
+  fleet-base-dir: /var/lib/git/nxmatic/fleet-manifests/flox
 ---
 apiVersion: flox.dev/v1alpha1
 kind: FloxEnvironment
@@ -317,6 +345,17 @@ spec:
         pkg-path: xdg-utils
       xdg-ninja:
         pkg-path: xdg-ninja
+      profile:
+        common: |
+          set -a
+
+          XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+          XDG_CACHE_HOME=${XDG_CACHE_HOME:-$HOME/.cache}
+          XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
+          XDG_STATE_HOME=${XDG_STATE_HOME:-$HOME/.local/state}
+          XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-$HOME/.xdg}
+
+          set +a
     options: {}
   env:
     name: xdg
