@@ -42,5 +42,5 @@ version = 1
 
 [profile]
   common = """
-  PATH="/run/wrappers/bin:$PATH"      
+    PATH="/run/wrappers/bin:$PATH"      
   """
