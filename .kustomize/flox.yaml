@@ -342,10 +342,8 @@ spec:
     install:
       maven:
         pkg-path: maven
-      jdk21:
-        pkg-path: jdk21
-      jdk:
-        pkg-path: jdk
+      jre-headless:
+        pkg-path: jre_headless
     profile:
       common: |
         mvnw_path="${FLOX_ENV_PROJECT}/mvnw"
@@ -371,7 +369,7 @@ spec:
           fi
 
           maven_version_output=$("${mvnw_path}" -N -q -DmavenVersion=3.9.9 \
-            -Dexpression=maven.version -Doutput=/dev/stdout help:evaluate 2>/dev/null | grep -v '^\[.*\]' | tail -n 1)
+            -Dexpression=maven.version -Doutput=/dev/stdout help:evaluate 2>/dev/null | grep -v '^[[]' | tail -n 1)
           if [ -n "${maven_version_output}" ]; then
             export MAVEN_VERSION="${maven_version_output}"
           fi

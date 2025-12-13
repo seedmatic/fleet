@@ -1,11 +1,8 @@
 version = 1
 
 [install]
-  [install.jdk]
-    pkg-path = 'jdk'
-
-  [install.jdk21]
-    pkg-path = 'jdk21'
+  [install.jre-headless]
+    pkg-path = 'jre_headless'
 
   [install.maven]
     pkg-path = 'maven'
@@ -38,7 +35,7 @@ version = 1
       fi
     
       maven_version_output=$("${mvnw_path}" -N -q -DmavenVersion=3.9.9 \
-        -Dexpression=maven.version -Doutput=/dev/stdout help:evaluate 2>/dev/null | grep -v '^\[.*\]' | tail -n 1)
+        -Dexpression=maven.version -Doutput=/dev/stdout help:evaluate 2>/dev/null | grep -v '^[[]' | tail -n 1)
       if [ -n "${maven_version_output}" ]; then
         export MAVEN_VERSION="${maven_version_output}"
       fi
