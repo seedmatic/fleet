@@ -2,7 +2,7 @@ version = 1
 
 [include]
   [[include.environments]]
-    dir = '/var/lib/git/nxmatic/fleet-manifests/flox/keyhole'
+    dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
 
 [install]
   [install.cachix]

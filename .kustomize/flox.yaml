@@ -45,7 +45,7 @@ spec:
         fi
     include:
       environments:
-        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+        - dir: /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     options:
       systems:
         - aarch64-darwin
@@ -125,7 +125,7 @@ spec:
         fi
     include:
       environments:
-        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+        - dir: /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     options: {}
   env:
     name: git
@@ -153,8 +153,8 @@ spec:
         - aarch64-linux
     include:
       environments:
-        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
-        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+        - dir: /var/lib/git/nxmatic/fleet/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
+        - dir: /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
   env:
     name: home
     version: 1
@@ -236,7 +236,7 @@ spec:
         pkg-group: kpt-tools
     include:
       environments:
-        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
+        - dir: /var/lib/git/nxmatic/fleet/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
     options:
       systems:
         - aarch64-darwin
@@ -418,7 +418,7 @@ spec:
       common: "PATH=\"/run/wrappers/bin:$PATH\"      \n"
     include:
       environments:
-        - dir: /var/lib/git/nxmatic/fleet-manifests/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+        - dir: /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     options: {}
   env:
     name: nix
@@ -429,7 +429,7 @@ kind: ApplySetters
 metadata:
   name: fleet-base-dir
 data:
-  fleet-base-dir: /var/lib/git/nxmatic/fleet-manifests/flox
+  fleet-base-dir: /var/lib/git/nxmatic/fleet/flox
 ---
 apiVersion: flox.dev/v1alpha1
 kind: FloxEnvironment
@@ -445,17 +445,17 @@ spec:
         pkg-path: xdg-utils
       xdg-ninja:
         pkg-path: xdg-ninja
-      profile:
-        common: |
-          set -a
+    profile:
+      common: |
+        set -a
 
-          XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
-          XDG_CACHE_HOME=${XDG_CACHE_HOME:-$HOME/.cache}
-          XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
-          XDG_STATE_HOME=${XDG_STATE_HOME:-$HOME/.local/state}
-          XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-$HOME/.xdg}
+        XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+        XDG_CACHE_HOME=${XDG_CACHE_HOME:-$HOME/.cache}
+        XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
+        XDG_STATE_HOME=${XDG_STATE_HOME:-$HOME/.local/state}
+        XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-$HOME/.xdg}
 
-          set +a
+        set +a
     options: {}
   env:
     name: xdg

@@ -2,7 +2,7 @@ version = 1
 
 [include]
   [[include.environments]]
-    dir = '/var/lib/git/nxmatic/fleet-manifests/flox/manifest-tools'
+    dir = '/var/lib/git/nxmatic/fleet/flox/manifest-tools'
 
 [install]
   [install.ceph-client]
