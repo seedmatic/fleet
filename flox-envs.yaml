@@ -31,6 +31,16 @@ environments:
 apiVersion: nxmatic.dev/v1alpha1
 kind: FloxEnvironmentDescriptor
 environments:
+  - name: editor
+    source: editor.yaml
+    manifest: flox/editor/.flox/env/manifest.toml
+    envJson: flox/editor/.flox/env.json
+    includes: []
+    localIncludes: []
+---
+apiVersion: nxmatic.dev/v1alpha1
+kind: FloxEnvironmentDescriptor
+environments:
   - name: git
     source: git.yaml
     manifest: flox/git/.flox/env/manifest.toml

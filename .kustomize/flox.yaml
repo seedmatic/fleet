@@ -94,6 +94,23 @@ spec:
 apiVersion: flox.dev/v1alpha1
 kind: FloxEnvironment
 metadata:
+  name: editor
+spec:
+  manifest:
+    version: 1
+    install:
+      emacs-nox:
+        pkg-path: emacs-nox
+      vim:
+        pkg-path: vim
+    options: {}
+  env:
+    name: editor
+    version: 1
+---
+apiVersion: flox.dev/v1alpha1
+kind: FloxEnvironment
+metadata:
   name: git
 spec:
   manifest:
