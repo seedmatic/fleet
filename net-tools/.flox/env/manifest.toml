@@ -5,11 +5,6 @@ version = 1
     dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
 
 [install]
-  [install.conntrack_tools]
-    pkg-group = 'net-tools'
-    pkg-path = 'conntrack_tools'
-    systems = ['aarch64-linux']
-
   [install.dhcp]
     pkg-group = 'net-tools'
     pkg-path = 'dhcp'
@@ -23,6 +18,7 @@ version = 1
   [install.ipcalc]
     pkg-group = 'net-tools'
     pkg-path = 'ipcalc'
+    version = '^1.0.3'
 
   [install.iptstate]
     pkg-group = 'net-tools'

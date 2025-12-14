@@ -444,10 +444,6 @@ spec:
   manifest:
     version: 1
     install:
-      conntrack_tools:
-        pkg-path: conntrack_tools
-        systems:
-          - aarch64-linux
       dhcp:
         pkg-path: dhcp
         systems:
@@ -458,6 +454,7 @@ spec:
           - aarch64-linux
       ipcalc:
         pkg-path: ipcalc
+        version: '^1.0.3'
       iptstate:
         pkg-path: iptstate
         systems:
