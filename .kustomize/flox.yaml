@@ -504,7 +504,6 @@ spec:
       nix-fast-build:
         pkg-path: nix-fast-build
     profile:
-      common: "PATH=\"/run/wrappers/bin:$PATH\"      \n"
     include:
       environments:
         - dir: /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole

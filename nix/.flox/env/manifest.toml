@@ -50,8 +50,3 @@ version = 1
     pkg-path = 'watchexec'
 
 [options]
-
-[profile]
-  common = """
-    PATH="/run/wrappers/bin:$PATH"      
-  """
