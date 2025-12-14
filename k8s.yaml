@@ -29,5 +29,4 @@ packages:
   - kubectl-rook-ceph
   - kubectl-view-secret
   - tubekit
-  - yq-go
   - kpt

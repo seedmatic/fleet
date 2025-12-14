@@ -277,19 +277,12 @@ spec:
       tubekit:
         pkg-path: tubekit
         pkg-group: kubectl-tools
-      yq-go:
-        pkg-path: yq-go
-        pkg-group: yaml-tools
       kpt:
         pkg-path: kpt
         pkg-group: kpt-tools
     include:
       environments:
         - dir: /var/lib/git/nxmatic/fleet/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
-    options:
-      systems:
-        - aarch64-darwin
-        - aarch64-linux
   env:
     name: k8s
     version: 1

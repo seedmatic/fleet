@@ -82,10 +82,3 @@ version = 1
   [install.tubekit]
     pkg-group = 'k8s-kubectl-tools'
     pkg-path = 'tubekit'
-
-  [install.yq-go]
-    pkg-group = 'k8s-yaml-tools'
-    pkg-path = 'yq-go'
-
-[options]
-  systems = ['aarch64-darwin', 'aarch64-linux']
