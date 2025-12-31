@@ -20,6 +20,10 @@ version = 1
     pkg-path = 'ipcalc'
     version = '^1.0.3'
 
+  [install.iperf3]
+    pkg-group = 'net-tools'
+    pkg-path = 'iperf3'
+  
   [install.iptstate]
     pkg-group = 'net-tools'
     pkg-path = 'iptstate'
@@ -33,6 +37,10 @@ version = 1
   [install.nmap]
     pkg-group = 'net-tools'
     pkg-path = 'nmap'
+
+  [install.speedtest]
+    pkg-group = 'net-tools'
+    pkg-path = 'speedtest-go'
 
   [install.tshark]
     pkg-group = 'net-tools'
