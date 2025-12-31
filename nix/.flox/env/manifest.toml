@@ -49,4 +49,9 @@ version = 1
     pkg-group = 'nix'
     pkg-path = 'watchexec'
 
+  [install.linux-builder]
+    pkg-group = 'home'
+    pkg-path = 'darwin.linux-builder'
+    systems = ['aarch64-darwin']
+
 [options]
