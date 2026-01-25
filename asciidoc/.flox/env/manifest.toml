@@ -5,6 +5,7 @@ version = 1
     dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
 
 [install]
+html2text.pkg-path = "html2text"
   [install.antora]
     pkg-group = 'asciidoc'
     pkg-path = 'antora'
