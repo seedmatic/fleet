@@ -82,3 +82,11 @@ version = 1
   [install.tubekit]
     pkg-group = 'k8s-kubectl-tools'
     pkg-path = 'tubekit'
+
+  [install.podman-wrapper]
+    pkg-group = 'local'
+    pkg-path = './pkgs/podman-wrapper.nix'
+    systems = ['aarch64-darwin']
+
+[options]
+  systems = ['aarch64-darwin', 'aarch64-linux']
