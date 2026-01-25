@@ -84,9 +84,7 @@ version = 1
     pkg-path = 'tubekit'
 
   [install.podman-wrapper]
-    pkg-group = 'local'
-    pkg-path = './pkgs/podman-wrapper.nix'
-    systems = ['aarch64-darwin']
+    flake = 'git+https://github.com/nxmatic/fleet?dir=flox/k8s/.flox/flakes/podman-wrapper'
 
 [options]
   systems = ['aarch64-darwin', 'aarch64-linux']
