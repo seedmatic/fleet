@@ -35,6 +35,7 @@ version = 1
     dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
 
 [install]
+actionlint.pkg-path = "actionlint"
   [install.gh]
     pkg-group = 'git'
     pkg-path = 'gh'
