@@ -5,6 +5,8 @@ version = 1
     dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
 
 [install]
+dig.pkg-path = "dig"
+lsof.pkg-path = "lsof"
   [install.dhcp]
     pkg-group = 'net-tools'
     pkg-path = 'dhcp'
