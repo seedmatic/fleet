@@ -44,8 +44,6 @@ spec:
       systems:
         - aarch64-darwin
         - aarch64-linux
-        - x86_64-linux
-        - x86_64-darwin
   env:
     name: asciidoc
     version: 1
@@ -68,8 +66,6 @@ spec:
     options:
       systems:
         - aarch64-darwin
-        - aarch64-linux
-        - x86_64-linux
         - x86_64-darwin
   env:
     name: asciidoc
@@ -467,8 +463,6 @@ spec:
       systems:
         - aarch64-darwin
         - aarch64-linux
-        - x86_64-linux
-        - x86_64-darwin
   env:
     name: net-tools
     version: 1

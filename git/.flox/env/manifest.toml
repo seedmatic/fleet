@@ -1,4 +1,4 @@
-version = 1
+schema-version = "1.10.0"
 
 [hook]
   on-activate = """
@@ -36,21 +36,26 @@ version = 1
 
 [install]
 actionlint.pkg-path = "actionlint"
+actionlint.outputs = "all"
   [install.gh]
-    pkg-group = 'git'
-    pkg-path = 'gh'
+    pkg-group = "git"
+    pkg-path = "gh"
+outputs = "all"
 
   [install.git]
-    pkg-group = 'git'
-    pkg-path = 'git'
+    pkg-group = "git"
+    pkg-path = "git"
+outputs = "all"
 
   [install.git-town]
-    pkg-group = 'git'
-    pkg-path = 'git-town'
+    pkg-group = "git"
+    pkg-path = "git-town"
+outputs = "all"
 
   [install.gitflow]
-    pkg-group = 'git'
-    pkg-path = 'gitflow'
+    pkg-group = "git"
+    pkg-path = "gitflow"
+outputs = "all"
 
 [options]
 

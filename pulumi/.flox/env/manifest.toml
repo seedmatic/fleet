@@ -7,14 +7,8 @@ schema-version = "1.10.0"
 ##  $ flox show gum     <- show all versions of a package
 ## -------------------------------------------------------------------
 [install]
-bash.pkg-path = "bash"
-bash.outputs = "all"
-zsh.pkg-path = "zsh"
-zsh.outputs = "all"
-shellcheck.pkg-path = "shellcheck"
-shellcheck.outputs = "all"
-shfmt.pkg-path = "shfmt"
-pstree.pkg-path = "pstree"
+pulumi.pkg-path = "pulumi-bin"
+pulumictl.pkg-path = "pulumictl"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
@@ -24,6 +18,8 @@ pstree.pkg-path = "pstree"
 ##      as well as [hook], [profile] scripts and [services] below.
 ## -------------------------------------------------------------------
 [vars]
+  PULUMI_CONFIG_PASSPHRASE=''
+  PULUMI_HOME='${XDG_STATE_HOME:-$HOME/.local/state}/pulumi'
 # INTRO_MESSAGE = "It's gettin' Flox in here"
 
 
@@ -31,6 +27,9 @@ pstree.pkg-path = "pstree"
 ##  ... run by _bash_ shell when you run 'flox activate'.
 ## -------------------------------------------------------------------
 [hook]
+  on-activate = '''
+    mkdir -p "$PULUMI_HOME"
+  '''
 # on-activate = '''
 #   # -> Set variables, create files and directories
 #   # -> Perform initialization steps, e.g. create a python venv

@@ -1,4 +1,4 @@
-version = 1
+schema-version = "1.10.0"
 
 [include]
   [[include.environments]]
@@ -6,44 +6,54 @@ version = 1
 
 [install]
 html2text.pkg-path = "html2text"
+html2text.outputs = "all"
   [install.antora]
-    pkg-group = 'asciidoc'
-    pkg-path = 'antora'
+    pkg-group = "asciidoc"
+    pkg-path = "antora"
+outputs = "all"
 
   [install.antora-lunr-extension]
-    pkg-group = 'asciidoc'
-    pkg-path = 'antora-lunr-extension'
+    pkg-group = "asciidoc"
+    pkg-path = "antora-lunr-extension"
+outputs = "all"
 
   [install.antora-ui-default]
-    pkg-group = 'asciidoc'
-    pkg-path = 'antora-ui-default'
+    pkg-group = "asciidoc"
+    pkg-path = "antora-ui-default"
+outputs = "all"
 
   [install.asciidoctor-with-extensions]
-    pkg-group = 'asciidoc'
-    pkg-path = 'asciidoctor-with-extensions'
+    pkg-group = "asciidoc"
+    pkg-path = "asciidoctor-with-extensions"
+outputs = "all"
 
   [install.graphviz]
-    pkg-group = 'asciidoc'
-    pkg-path = 'graphviz'
+    pkg-group = "asciidoc"
+    pkg-path = "graphviz"
+outputs = "all"
 
   [install.jdk]
-    pkg-group = 'asciidoc'
-    pkg-path = 'jdk'
+    pkg-group = "asciidoc"
+    pkg-path = "jdk"
+outputs = "all"
 
   [install.nodejs]
-    pkg-group = 'asciidoc'
-    pkg-path = 'nodejs'
+    pkg-group = "asciidoc"
+    pkg-path = "nodejs"
+outputs = "all"
 
   [install.plantuml]
-    pkg-group = 'asciidoc'
-    pkg-path = 'plantuml'
+    pkg-group = "asciidoc"
+    pkg-path = "plantuml"
+outputs = "all"
 
   [install.pnpm]
-    pkg-group = 'asciidoc'
-    pkg-path = 'pnpm'
+    pkg-group = "asciidoc"
+    pkg-path = "pnpm"
+outputs = "all"
 
 [options]
-  systems = ['aarch64-darwin', 'aarch64-linux', 'x86_64-linux', 'x86_64-darwin']
+systems = ["aarch64-darwin", "aarch64-linux", "x86_64-linux", "x86_64-darwin"]
 
 [profile]
   common = """
