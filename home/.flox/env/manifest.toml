@@ -1,4 +1,4 @@
-version = 1
+schema-version = "1.11.0"
 
 [include]
   [[include.environments]]
@@ -9,12 +9,14 @@ version = 1
 
 [install]
   [install.direnv]
-    pkg-group = 'home'
-    pkg-path = 'direnv'
+    pkg-group = "home"
+    pkg-path = "direnv"
+outputs = "all"
 
   [install.lldpd]
-    pkg-group = 'home'
-    pkg-path = 'lldpd'
+    pkg-group = "home"
+    pkg-path = "lldpd"
+outputs = "all"
 
 [options]
   systems = ['aarch64-darwin', 'aarch64-linux']
