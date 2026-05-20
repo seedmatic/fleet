@@ -8,6 +8,7 @@ schema-version = "1.10.0"
 dig.pkg-path = "dig"
 dig.outputs = "all"
 lsof.pkg-path = "lsof"
+godns.pkg-path = "godns"
   [install.dhcp]
     pkg-group = "net-tools"
     pkg-path = "dhcp"

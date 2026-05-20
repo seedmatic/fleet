@@ -1,4 +1,4 @@
-schema-version = "1.10.0"
+schema-version = "1.11.0"
 
 
 ## Install Packages --------------------------------------------------
@@ -7,11 +7,10 @@ schema-version = "1.10.0"
 ##  $ flox show gum     <- show all versions of a package
 ## -------------------------------------------------------------------
 [install]
-tart.pkg-path = "tart"
-tart.systems = ["x86_64-darwin", "aarch64-darwin"]
-packer.pkg-path = "packer"
-socat.pkg-path = "socat"
-screen.pkg-path = "screen"
+claude-code.pkg-path = "claude-code"
+claude-code-acp.pkg-path = "claude-code-acp"
+claude-monitor.pkg-path = "claude-monitor"
+claude-agent-acp.pkg-path = "claude-agent-acp"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
@@ -23,11 +22,24 @@ screen.pkg-path = "screen"
 [vars]
 # INTRO_MESSAGE = "It's gettin' Flox in here"
 
-
 ## Activation Hook ---------------------------------------------------
 ##  ... run by _bash_ shell when you run 'flox activate'.
 ## -------------------------------------------------------------------
 [hook]
+  on-activate = '''
+    AI_SECRETS_FILE="${FLOX_ENV_PROJECT}/.flox/env/.secrets"
+    CLAUDE_JSON_FILE="${HOME}/.claude.json"
+    : "Ensure claude json file existing"
+    [[ -f "${CLAUDE_JSON_FILE}" ]] || 
+      yq --null-input --output-format=json '{}' > "${CLAUDE_JSON_FILE}"
+    : "Merge secrets inside"
+    yq -i -p=json -o=json -I=2 eval-all \
+      '. as $item ireduce ({}; . * $item )' \
+      "${CLAUDE_JSON_FILE}" <( 
+        yq -p=yaml -o=json '.claude-code' "${AI_SECRETS_FILE}"
+      )
+  '''  
+
 # on-activate = '''
 #   # -> Set variables, create files and directories
 #   # -> Perform initialization steps, e.g. create a python venv

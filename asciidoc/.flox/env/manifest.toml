@@ -7,6 +7,7 @@ schema-version = "1.10.0"
 [install]
 html2text.pkg-path = "html2text"
 html2text.outputs = "all"
+zgrviewer.pkg-path = "zgrviewer"
   [install.antora]
     pkg-group = "asciidoc"
     pkg-path = "antora"

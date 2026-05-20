@@ -5,12 +5,6 @@ schema-version = "1.10.0"
     dir = '/var/lib/git/nxmatic/fleet/flox/manifest-tools'
 
 [install]
-  [install.ceph-client]
-    pkg-group = "k8s-kubectl-tools"
-    pkg-path = "ceph-client"
-    systems = ["aarch64-linux"]
-outputs = "all"
-
   [install.cilium-cli]
     pkg-group = "k8s-kubectl-tools"
     pkg-path = "cilium-cli"
