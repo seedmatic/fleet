@@ -2,7 +2,7 @@ schema-version = "1.10.0"
 
 [include]
   [[include.environments]]
-    dir = '/var/lib/git/nxmatic/fleet/flox/manifest-tools'
+    dir = '../manifest-tools'
 
 [install]
   [install.cilium-cli]

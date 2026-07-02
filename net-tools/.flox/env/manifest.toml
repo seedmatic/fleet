@@ -2,7 +2,7 @@ schema-version = "1.10.0"
 
 [include]
   [[include.environments]]
-    dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
+    dir = '../keyhole'
 
 [install]
 dig.pkg-path = "dig"

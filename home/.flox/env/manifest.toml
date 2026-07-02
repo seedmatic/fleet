@@ -1,11 +1,14 @@
-schema-version = "1.11.0"
+schema-version = "1.10.0"
 
 [include]
   [[include.environments]]
-    dir = '/var/lib/git/nxmatic/fleet/flox/xdg'
+    dir = '../keyhole'
 
   [[include.environments]]
-    dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
+    dir = '../shell'
+
+  [[include.environments]]
+    dir = '../xdg'
 
 [install]
   [install.direnv]
@@ -19,4 +22,4 @@ outputs = "all"
 outputs = "all"
 
 [options]
-  systems = ['aarch64-darwin', 'aarch64-linux']
+systems = ["aarch64-darwin", "aarch64-linux"]

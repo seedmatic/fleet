@@ -32,15 +32,14 @@ schema-version = "1.10.0"
 
 [include]
   [[include.environments]]
-    dir = '/var/lib/git/nxmatic/fleet/flox/keyhole'
+    dir = '../keyhole'
 
 [install]
 actionlint.pkg-path = "actionlint"
-actionlint.outputs = "all"
+lazygit.pkg-path = "lazygit"
   [install.gh]
     pkg-group = "git"
     pkg-path = "gh"
-outputs = "all"
 
   [install.git]
     pkg-group = "git"
@@ -50,12 +49,10 @@ outputs = "all"
   [install.git-town]
     pkg-group = "git"
     pkg-path = "git-town"
-outputs = "all"
 
   [install.gitflow]
     pkg-group = "git"
     pkg-path = "gitflow"
-outputs = "all"
 
 [options]
 
