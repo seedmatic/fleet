@@ -1,12 +1,4 @@
-## Flox Environment Manifest -----------------------------------------
-##
-##   _Everything_ you need to know about the _manifest_ is here:
-##
-##   https://flox.dev/docs/reference/command-reference/manifest.toml/
-##
-## -------------------------------------------------------------------
-# Flox manifest version managed by Flox CLI
-version = 1
+schema-version = "1.14.0"
 
 
 ## Install Packages --------------------------------------------------
@@ -29,7 +21,7 @@ maven.pkg-path = "maven"
 ## -------------------------------------------------------------------
 [vars]
 # INTRO_MESSAGE = "It's gettin' Flox in here"
-
+  JAVA_TOOL_OPTIONS = "${JAVA_TOOL_OPTIONS:-} --enable-native-access=ALL-UNNAMED"
 
 ## Activation Hook ---------------------------------------------------
 ##  ... run by _bash_ shell when you run 'flox activate'.
