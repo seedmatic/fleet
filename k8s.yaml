@@ -7,7 +7,7 @@ source: k8s.yaml
 manifest: flox/k8s/.flox/env/manifest.toml
 envJson: flox/k8s/.flox/env.json
 includes:
-  - /var/lib/git/nxmatic/fleet/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
+  - /var/lib/git/seedmatic/fleet/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
 localIncludes:
   - manifest-tools
 packages:

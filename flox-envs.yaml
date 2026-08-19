@@ -12,7 +12,7 @@ environments:
     manifest: flox/asciidoc/.flox/env/manifest.toml
     envJson: flox/asciidoc/.flox/env.json
     includes:
-      - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+      - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     localIncludes:
       - keyhole
 ---
@@ -24,7 +24,7 @@ environments:
     manifest: flox/dns-tools/.flox/env/manifest.toml
     envJson: flox/dns-tools/.flox/env.json
     includes:
-      - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+      - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     localIncludes:
       - keyhole
 ---
@@ -46,7 +46,7 @@ environments:
     manifest: flox/git/.flox/env/manifest.toml
     envJson: flox/git/.flox/env.json
     includes:
-      - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+      - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     localIncludes:
       - keyhole
 ---
@@ -68,8 +68,8 @@ environments:
     manifest: flox/home/.flox/env/manifest.toml
     envJson: flox/home/.flox/env.json
     includes:
-      - /var/lib/git/nxmatic/fleet/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
-      - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+      - /var/lib/git/seedmatic/fleet/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
+      - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     localIncludes:
       - xdg
       - keyhole
@@ -82,7 +82,7 @@ environments:
     manifest: flox/k8s/.flox/env/manifest.toml
     envJson: flox/k8s/.flox/env.json
     includes:
-      - /var/lib/git/nxmatic/fleet/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
+      - /var/lib/git/seedmatic/fleet/flox/manifest-tools # kpt-set: ${fleet-base-dir}/manifest-tools
     localIncludes:
       - manifest-tools
 ---
@@ -138,7 +138,7 @@ environments:
     manifest: flox/net-tools/.flox/env/manifest.toml
     envJson: flox/net-tools/.flox/env.json
     includes:
-      - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+      - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     localIncludes:
       - keyhole
 ---
@@ -150,7 +150,7 @@ environments:
     manifest: flox/nix/.flox/env/manifest.toml
     envJson: flox/nix/.flox/env.json
     includes:
-      - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+      - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
     localIncludes:
       - keyhole
 ---

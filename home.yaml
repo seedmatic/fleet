@@ -7,8 +7,8 @@ source: home.yaml
 manifest: flox/home/.flox/env/manifest.toml
 envJson: flox/home/.flox/env.json
 includes:
-  - /var/lib/git/nxmatic/fleet/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
-  - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+  - /var/lib/git/seedmatic/fleet/flox/xdg # kpt-set: ${fleet-base-dir}/xdg
+  - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
 localIncludes:
   - xdg
   - keyhole

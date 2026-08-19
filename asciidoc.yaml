@@ -7,7 +7,7 @@ source: asciidoc.yaml
 manifest: flox/asciidoc/.flox/env/manifest.toml
 envJson: flox/asciidoc/.flox/env.json
 includes:
-  - /var/lib/git/nxmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
+  - /var/lib/git/seedmatic/fleet/flox/keyhole # kpt-set: ${fleet-base-dir}/keyhole
 localIncludes:
   - keyhole
 packages:

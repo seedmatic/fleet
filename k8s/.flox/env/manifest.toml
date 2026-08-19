@@ -97,7 +97,7 @@ outputs = "all"
 outputs = "all"
 
   [install.podman-wrapper]
-flake = "git+https://github.com/nxmatic/fleet?dir=flox/k8s/.flox/flakes/podman-wrapper"
+flake = "git+https://github.com/seedmatic/fleet?dir=flox/k8s/.flox/flakes/podman-wrapper"
 outputs = "all"
 
 [options]
