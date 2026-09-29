@@ -1,6 +1,7 @@
 schema-version = "1.11.0"
 
 [install]
+go-2fa.pkg-path = "go-2fa"
   [install.age]
     pkg-group = "keyhole"
     pkg-path = "age"

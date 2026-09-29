@@ -21,7 +21,7 @@ maven.pkg-path = "maven"
 ## -------------------------------------------------------------------
 [vars]
 # INTRO_MESSAGE = "It's gettin' Flox in here"
-  JAVA_TOOL_OPTIONS = "${JAVA_TOOL_OPTIONS:-} --enable-native-access=ALL-UNNAMED"
+  #JAVA_TOOL_OPTIONS = "${JAVA_TOOL_OPTIONS:-} --enable-native-access=ALL-UNNAMED"
 
 ## Activation Hook ---------------------------------------------------
 ##  ... run by _bash_ shell when you run 'flox activate'.
