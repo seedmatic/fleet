@@ -60,9 +60,9 @@ outputs = "all"
     pkg-path = "watchexec"
 outputs = "all"
 
-  [install.linux-builder]
+  [install.linux-builder-vz]
     pkg-group = "home"
-    pkg-path = "darwin.linux-builder"
+    pkg-path = "darwin.linux-builder-vz"
     systems = ['aarch64-darwin']
 outputs = "all"
 
