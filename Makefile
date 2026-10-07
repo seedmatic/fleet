@@ -1,6 +1,5 @@
 FLOX_DIR ?= flox
 RKE2_DIR ?= rke2
-YQ ?= yq
 FLOX_REMOTE ?= origin
 RKE2_REMOTE ?= origin
 FLOX_BRANCH ?= flox-subtree
@@ -117,17 +116,8 @@ flox-refresh-locks:
 		if [[ -n "${refreshed[$$env_dir]+set}" ]]; then
 			return 0
 		fi
-		local env_name="$$(basename "$$env_dir")"
-		local descriptor="$$env_dir/$$env_name.yaml"
 		local manifest="$$env_dir/.flox/env/manifest.toml"
-		if [ -f "$$descriptor" ] && command -v $(YQ) >/dev/null 2>&1; then
-			while IFS= read -r include_dir; do
-				[ -z "$$include_dir" ] && continue
-				case "$$include_dir" in
-					"$$FLOX_PATH"/*) refresh_env "$$include_dir" ;
-				esac
-			done < <($(YQ) eval '(.includes // [])[]' "$$descriptor" 2>/dev/null || true)
-		elif [ -f "$$manifest" ]; then
+		if [ -f "$$manifest" ]; then
 			while IFS= read -r include_dir; do
 				[ -z "$$include_dir" ] && continue
 				case "$$include_dir" in
