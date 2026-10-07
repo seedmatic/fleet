@@ -1,2 +1,0 @@
-# @codebase
-**/01-secret-*.yaml filter=sops-yaml
